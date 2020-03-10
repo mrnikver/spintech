@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  spintech:
+    container_name: spintech
+    image: postgres
+    ports:
+      - "5440:5432"
+    environment:
+      POSTGRES_DB: spintech
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password

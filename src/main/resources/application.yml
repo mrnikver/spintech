@@ -1,0 +1,17 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /spintech
+
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5440/spintech
+    username: user
+    password: password
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
