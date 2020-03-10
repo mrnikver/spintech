@@ -1,8 +1,8 @@
 package com.spintech.startup;
 
-import com.spintech.entity.impl.Actor;
-import com.spintech.entity.impl.Show;
-import com.spintech.entity.impl.User;
+import com.spintech.entity.Actor;
+import com.spintech.entity.Show;
+import com.spintech.entity.User;
 import com.spintech.repository.ActorRepository;
 import com.spintech.repository.ShowRepository;
 import com.spintech.repository.UserRepository;

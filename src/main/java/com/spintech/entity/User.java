@@ -1,6 +1,5 @@
-package com.spintech.entity.impl;
+package com.spintech.entity;
 
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

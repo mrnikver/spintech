@@ -1,4 +1,4 @@
-package com.spintech.entity.impl;
+package com.spintech.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
