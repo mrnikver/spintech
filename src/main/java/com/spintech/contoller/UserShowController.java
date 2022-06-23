@@ -46,4 +46,9 @@ public class UserShowController {
     public List<ShowResponse> getRecommendedUnwatchedShows(@PathVariable Long userId) {
         return userService.getRecommendedUnwatchedShows(userId);
     }
+
+    @GetMapping("/get-all-shows")
+    public List<ShowResponse> getAllShows() {
+        return userService.getAllShows();
+    }
 }

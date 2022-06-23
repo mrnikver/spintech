@@ -3,6 +3,7 @@ package com.spintech.service.impl;
 import com.spintech.entity.Actor;
 import com.spintech.entity.Show;
 import com.spintech.entity.User;
+import com.spintech.repository.ShowRepository;
 import com.spintech.repository.UserRepository;
 import com.spintech.response.ActorResponse;
 import com.spintech.response.ShowResponse;
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
+    private final ShowRepository showRepository;
 
     @Override
     public List<ShowResponse> getRecommendedUnwatchedShows(Long userId) {
@@ -27,6 +29,14 @@ public class UserServiceImpl implements UserService {
                 .map(Actor::getShows)
                 .flatMap(Collection::stream)
                 .filter(show -> !user.getWatchedShows().contains(show))
+                .map(this::toShowResponse)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ShowResponse> getAllShows() {
+        return showRepository.findAll()
+                .stream()
                 .map(this::toShowResponse)
                 .collect(Collectors.toList());
     }
